@@ -1,0 +1,528 @@
+html,body{
+    /*去除掉到浏览器边界的空档*/
+    margin: 0px;
+    padding: 0px;
+    font-size:62.5%;/*设置默认字体大小为10px*/
+}
+.clear{
+    clear: both;
+}
+.whole_div{
+    /* 总内容居中 */
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+
+    overflow: auto;
+    overflow-x: hidden;/* 禁止左右滚动 */
+
+    background-color: #ffffff;
+    position: fixed;
+    /* 高1240*宽720 设置宽度自适应*/
+    width: 100%;
+    height:0;
+    padding-bottom:171.52%; /* 1235/720 */
+    /*max-width: 720px;*/
+
+    /*height: 0;*/
+    /*padding-bottom: 171.52%;!* 1235/720=171.52% *!*/
+}
+.header{
+    background-color: #5fc0cd;
+    position: fixed;
+    /*background-image: url(images/header.png);*/
+    /*max-width: 720px;*/
+    max-height: 80px;
+    /* 设置宽度撑满 高度固定 */
+    width: 100%;
+    height:80px;
+    /*padding-bottom: 11.8%;!* 85px/720px=11.8% *!*/
+}
+/* return图片 */
+.header img{
+    float: left;
+    margin-left: 35px;/* 35/720=4.96 */
+    margin-top: 22px;/* 字与header的上边22/header的高85=25.88% */
+}
+/* 文字：个人主页 */
+.header span{
+    margin-left: 40.27%;/* 290/720=40.27% */
+    font-size:2.7rem;/* 36px/720=5% */
+    color: #ffffff;
+    letter-spacing: 3px;
+    /* span是行内元素，直接写line-height无效 垂直居中*/
+    display: block;
+    line-height:276.22%;/* line-height设计稿header行高80/字体大小36=222.22% */
+}
+footer{
+    /*border:solid black;*/
+    position: fixed;
+    /*top: 89.63%; !* 按钮与顶部距离1107/定义了fixed的父元素高度1235=89.63% *!*/
+    bottom:3.23%;/* 40/1235=3.23 */
+
+    /*max-width: 720px;*/
+    width:100%;
+    height:88px;
+    /*!* 设置宽度自适应，高度成比例 *!*/
+    /*width: 100%;*/
+    /*height:0;*/
+    /*padding-bottom: 12.22%;!* 按钮图片高88/720=12.22% *!*/
+
+    /*border:solid red;*/
+}
+.leave_message_btn{
+    outline:medium;/* 隐藏掉点击按钮出现的虚线框 */
+    position: absolute;
+    left:5.13%;  /* 37/720=5.13% */
+
+    background-color:transparent;/* 背景色透明 */
+
+    border: 2px solid #5fc0cd;
+    /*!*按钮高宽比例控制，因为字与下边距离28px，字与border空出2px，26px/720=3.61%*!*/
+    /*padding:3.61%;*/
+    width:43.05%; /* 310px/720=43.05% */
+    height:88px;
+
+}
+.leave_message_btn span{
+    /*border:solid;*/
+    vertical-align: center;
+    color: #5fc0cd;
+    font-family: "黑体";
+    font-size: 3.4rem; /* vw是相对与窗口的大小 34px/720=4.72% */
+}
+/* 电话联系按钮 */
+.contact_btn{
+    outline:medium;
+    position: absolute;
+    left: 51.66%; /* 372/720=51.66% */
+    background-color: #5fc0cd;
+    border:2px solid #5fc0cd;
+    /*!*按钮高宽比例控制，因为字与下边距离28px，字与border空出2px，26px/720=3.61%*!*/
+    /*padding:3.61%;*/
+    width:43.05%; /* 310px/720=43.05% */
+    height:88px;
+}
+.contact_btn span{
+    vertical-align: center;
+    color: #ffffff;
+    font-family: "黑体";
+    font-size: 3.4rem; /* vw是相对与窗口的大小 34px/720=4.72% */
+}
+/* 按钮边框圆角 */
+.leave_message_btn,.contact_btn{
+    border-radius: 6px;
+    -moz-border-radius: 6px; /* Mozilla浏览器的私有属性 */
+    -webkit-border-radius: 6px; /* Webkit浏览器的私有属性 */
+}
+/* 主体内容 */
+.content{
+    padding-top: 80px; /* 80/720=11.11% */
+    /*border:solid seashell;*/
+    width: 100%;
+}
+.per_information{
+    /*border:solid black;*/
+    background-image: url(images/up_bg_img.png);
+    /*background-size: 100% 100%;!* 背景图缩放 *!*/
+    background-size: cover;
+    width: 100%;
+    /*margin-top: 11.8%;!* 85px/720=11.8% *!*/
+    /*background-color: #09BE07;*/
+
+}
+/* 头像图片 */
+.head_icon{
+    float:left;
+    /*border:solid blanchedalmond;*/
+    margin-left: 30px;/* 30px/720=4.16 */
+    margin-top: 79px; /* 79/720=10.97% */
+    margin-bottom: 79px;
+    width:169px; /* 169/720=23.47%*/
+}
+.name_addr{
+    float: left;
+    width: 152px;
+    /*border: solid white;*/
+    margin-left: 76px; /* 239/720=33.19% */
+    margin-top: 129px;
+    /*font-size: 5vw; !* 36/720=5% *!*/
+    /*font-family: "黑体";*/
+    color: #ffffff;
+    /*垂直居中*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+
+    /*margin-top:16.25%;!* 117px/720= *!*/
+}
+.name{
+    /*border: solid darkviolet;*/
+    font-size:2.4rem; /* 24px/720 */
+}
+.age{
+    font-size: 2.4rem;
+    margin-left: 9%;
+}
+.addr{
+    /*border: solid coral;*/
+    /*width:100%;*/
+    padding: 0;
+    width:134px;
+    display: table;
+}
+.coor_icon{
+    /*border:solid red;*/
+    width: 50%; /* 18/720=2.5% 暂用8%*/
+    margin-top: 13%;
+    /*float: left;*/
+}
+.address{
+    width: 106px;
+    /*border:solid #999999;*/
+    font-family: "黑体";
+    color: #ffffff;
+    font-size: 1.5rem;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.down_content{
+    border:solid white;
+    margin-top: 0;
+    width:100%;
+}
+.ul{
+    border:solid;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    border:solid;
+    height:auto;
+    overflow: auto;
+    padding-bottom: 27px;
+}
+.center_content{
+    height: 100px;
+}
+.vertical_bar{
+    float: left;
+    border:solid;
+    background-color: #5fc0cd;
+    width: 3px;
+    height:0;
+    padding-bottom: 26px;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+/* 专业技能文字 */
+.professional_skill{
+    float: left;
+    /*display: block;*/
+    border:solid;
+    font-size:3.2rem;
+    margin-left: 31px;
+    margin-top: 29px;
+    /*margin-bottom: 37px;*/
+    /*line-height: 312.5%;!* 格子厚度100/字体32= *!*/
+
+}
+.star_first{
+    float: left;
+    width: 24px;
+    margin-left: 61px;
+    margin-top: 36px;
+    /*margin-bottom: 36px;*/
+}
+.home{
+    float: left;
+    font-size: 3.2rem;
+    color: #000000;
+    margin-left: 9px;
+    margin-top: 25px;
+}
+.star_second{
+    float: left;
+    width: 24px;
+    margin-left: 17px;
+    margin-top: 36px;
+}
+.not_include_food{
+    float: left;
+    font-size: 3.2rem;
+    color: #000000;
+    margin-left: 9px;
+    margin-top: 25px;
+}
+.minibar{
+    border:solid;
+    width: 1px;
+    height:0;
+    padding-bottom: 26px;
+    color: #e1e5e7;
+    margin-left: 215px;
+    margin-top: 38px;
+}
+.minibar_1{
+    border:solid;
+    float: left;
+    margin-left: 21px;
+    margin-top: 34px;
+}
+.deta_info1{
+    border:solid;
+    float: left;
+    margin-left: 61px;
+    font-size:3.2rem;
+    margin-top: 29px;
+    /*margin-bottom: 29px;*/
+}
+.deta_info2{
+    border:solid;
+    float: left;
+    margin-left: 61px;
+    font-size: 3.2rem;
+    margin-top: -39px;
+    display: inline-block;
+}
+.deta_info2_4{
+    font-size: 2.0rem;
+    /*display:block;*/
+    /*margin-top: -38px;*/
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -39px;
+
+    margin-left: 255px;
+    /*white-space: pre-wrap;*/
+}
+/*媒体查询*/
+@media screen and (max-width: 320px) {
+    .whole_div{
+        /*!* 总内容居中 *!*/
+        /*margin:auto;*/
+        /*left:0;*/
+        /*right:0;*/
+        /*top:0;*/
+
+        /*overflow: auto;*/
+        /*overflow-x: hidden;!* 禁止左右滚动 *!*/
+
+        background-color: #ffffff;
+        position: fixed;
+        /* 高1240*宽720 设置宽度自适应*/
+        width: 100%;
+        height:0;
+        padding-bottom:171.52%; /* 1235/720 */
+        /*max-width: 720px;*/
+
+        /*height: 0;*/
+        /*padding-bottom: 171.52%;!* 1235/720=171.52% *!*/
+    }
+    .header{
+        background-color: #5fc0cd;
+        position: fixed;
+        /*background-image: url(images/header.png);*/
+        /*max-width: 720px;*/
+        max-height: 80px;
+        /* 设置宽度撑满 高度固定 */
+        width: 100%;
+        height:52px;
+        /*padding-bottom: 11.8%;!* 85px/720px=11.8% *!*/
+    }
+    /* return图片 */
+    .header img{
+        float: left;
+        margin-left: 4.96%;/* 35/720=4.96 */
+        margin-top: 4.88%;/* 字与header的上边22/header的高85=25.88% */
+        width:3.91%; /* 宽21px/720 */
+        height:42.86%; /* 高35px/720=4.86% */
+    }
+    /* 文字：个人主页 */
+    .header span{
+        margin-left: 34.27%;/* 290/720=40.27% */
+        margin-top:-1%;
+        font-size:2.2rem;/* 36px/720=5% */
+        color: #ffffff;
+        letter-spacing: 3px;
+        /* span是行内元素，直接写line-height无效 垂直居中*/
+        display: block;
+        line-height:276.22%;/* line-height设计稿header行高80/字体大小36=222.22% */
+    }
+    footer{
+        /*border:solid black;*/
+        position: fixed;
+        /*top: 89.63%; !* 按钮与顶部距离1107/定义了fixed的父元素高度1235=89.63% *!*/
+        bottom:3.23%;/* 40/1235=3.23 */
+
+        /*max-width: 720px;*/
+        width:100%;
+        height:88px;
+        /*!* 设置宽度自适应，高度成比例 *!*/
+        /*width: 100%;*/
+        /*height:0;*/
+        /*padding-bottom: 12.22%;!* 按钮图片高88/720=12.22% *!*/
+
+        /*border:solid red;*/
+    }
+    .leave_message_btn{
+        outline:medium;/* 隐藏掉点击按钮出现的虚线框 */
+        position: absolute;
+        left:5.13%;  /* 37/720=5.13% */
+
+        background-color:transparent;/* 背景色透明 */
+
+        border: 2px solid #5fc0cd;
+        /*!*按钮高宽比例控制，因为字与下边距离28px，字与border空出2px，26px/720=3.61%*!*/
+        /*padding:3.61%;*/
+        width:43.05%; /* 310px/720=43.05% */
+        height:88px;
+
+    }
+    .leave_message_btn span{
+        /*border:solid;*/
+        vertical-align: center;
+        color: #5fc0cd;
+        font-family: "黑体";
+        font-size: 3.4rem; /* vw是相对与窗口的大小 34px/720=4.72% */
+    }
+    /* 电话联系按钮 */
+    .contact_btn{
+        outline:medium;
+        position: absolute;
+        left: 51.66%; /* 372/720=51.66% */
+        background-color: #5fc0cd;
+        border:2px solid #5fc0cd;
+        /*!*按钮高宽比例控制，因为字与下边距离28px，字与border空出2px，26px/720=3.61%*!*/
+        /*padding:3.61%;*/
+        width:43.05%; /* 310px/720=43.05% */
+        height:88px;
+    }
+    .contact_btn span{
+        vertical-align: center;
+        color: #ffffff;
+        font-family: "黑体";
+        font-size: 3.4rem; /* vw是相对与窗口的大小 34px/720=4.72% */
+    }
+    /* 按钮边框圆角 */
+    .leave_message_btn,.contact_btn{
+        border-radius: 6px;
+        -moz-border-radius: 6px; /* Mozilla浏览器的私有属性 */
+        -webkit-border-radius: 6px; /* Webkit浏览器的私有属性 */
+    }
+    /* 主体内容 */
+    .content{
+        padding-top: 80px; /* 80/720=11.11% */
+        /*border:solid seashell;*/
+        width: 100%;
+    }
+    .per_information{
+        /*border:solid black;*/
+        background-image: url(images/up_bg_img.png);
+        /*background-size: 100% 100%;!* 背景图缩放 *!*/
+        background-size: cover;
+        width: 100%;
+        /*margin-top: 11.8%;!* 85px/720=11.8% *!*/
+        /*background-color: #09BE07;*/
+
+    }
+    /* 头像图片 */
+    .head_icon{
+        float:left;
+        /*border:solid blanchedalmond;*/
+        margin-left: 30px;/* 30px/720=4.16 */
+        margin-top: 79px; /* 79/720=10.97% */
+        margin-bottom: 79px;
+        width:169px; /* 169/720=23.47%*/
+    }
+    .name_addr{
+        float: left;
+        width: 152px;
+        /*border: solid white;*/
+        margin-left: 76px; /* 239/720=33.19% */
+        margin-top: 129px;
+        /*font-size: 5vw; !* 36/720=5% *!*/
+        /*font-family: "黑体";*/
+        color: #ffffff;
+        /*垂直居中*/
+        /*display: inline-block;*/
+        /*vertical-align: middle;*/
+
+        /*margin-top:16.25%;!* 117px/720= *!*/
+    }
+    .name{
+        /*border: solid darkviolet;*/
+        font-size:2.4rem; /* 24px/720 */
+    }
+    .age{
+        font-size: 2.4rem;
+        margin-left: 9%;
+    }
+    .addr{
+        /*border: solid coral;*/
+        /*width:100%;*/
+        padding: 0;
+        width:134px;
+        display: table;
+    }
+    .coor_icon{
+        /*border:solid red;*/
+        width: 50%; /* 18/720=2.5% 暂用8%*/
+        margin-top: 13%;
+        /*float: left;*/
+    }
+    .address{
+        width: 106px;
+        /*border:solid #999999;*/
+        font-family: "黑体";
+        color: #ffffff;
+        font-size: 1.5rem;
+        display: table-cell;
+        vertical-align: middle;
+
+    }
+    .ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        border:solid;
+
+    }
+    .down_content{
+        margin-top: 0;
+        width:100%;
+    }
+    .vertical_bar{
+        background-color: #5fc0cd;
+        width: 3px;
+        height:0;
+        padding-bottom: 26px;
+        margin-top: 37px;
+        margin-left: 30px;
+    }
+    /* 专业技能文字 */
+    .professional_skill{
+        border:solid;
+        font-size:3.2rem;
+        margin-left: 61px;
+        margin-top: 34px;
+        line-height: 312.5%;/* 格子厚度100/字体32= */
+
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    /* your css code */
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    /* your css code */
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    /* your css code */
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* your css code */
+}
